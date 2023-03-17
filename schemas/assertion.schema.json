@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/assertion.schema.json",
+  "title": "DAMF Assertion Object",
+  "description": "The CID of these objects shall be used to identify assertions in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "assertion"
+    },
+    "claim": {
+      "$ref": "/formats/schema/ipldLink.schema.json"
+    },
+    "agent": {
+      "type": "string",
+      "format": "publicKey"
+    },
+    "signature": {
+      "type": "string",
+      "format": "digitalSignature"
+    }
+  },
+  "required": [ "format", "claim", "agent", "signature" ],
+  "additionalProperties": false
+}

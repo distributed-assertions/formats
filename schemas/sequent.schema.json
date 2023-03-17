@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/sequent.schema.json",
+  "title": "DAMF Sequent Object",
+  "description": "The CID of these objects shall be used to identify sequents in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "sequent"
+    },
+    "dependencies": {
+      "type": "array",
+      "item": {
+        "$ref": "/formats/schema/ipldLink.schema.json"
+      }
+    },
+    "conclusion": {
+      "$ref": "/formats/schema/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "dependencies", "conclusion" ],
+  "additionalProperties": false
+}

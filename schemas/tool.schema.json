@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/distributed-assertions/formats/blob/main/schemas/tool.schema.json",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/tool.schema.json",
   "title": "DAMF Tool Object",
   "description": "The CID of these objects shall be used to identify tools in DAMF",
   "type": "object",

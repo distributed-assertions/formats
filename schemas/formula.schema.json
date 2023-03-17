@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/formula.schema.json",
+  "title": "DAMF Formula Object",
+  "description": "The CID of these objects shall be used to identify formulas in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "formula"
+    },
+    "language": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "content": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "context": {
+      "type": "array",
+      "item": {
+        "$ref": "/formats/schema/ipldLink.schema.json"
+      }
+    }
+  },
+  "required": [ "format", "language", "content", "context" ],
+  "additionalProperties": false
+}

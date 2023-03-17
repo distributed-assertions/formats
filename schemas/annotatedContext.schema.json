@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-collections.github.io/formats/schemas/annotatedContext.schema.json",
+  "title": "DAMF Annotated Context Object",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "annotated-context"
+    },
+    "context": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "annotation": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "context", "annotation" ],
+  "additionalProperties": false
+}

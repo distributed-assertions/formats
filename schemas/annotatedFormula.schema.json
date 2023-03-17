@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-collections.github.io/formats/schemas/annotatedFormula.schema.json",
+  "title": "DAMF Annotated Formula Object",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "annotated-formula"
+    },
+    "formula": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "annotation": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "formula", "annotation" ],
+  "additionalProperties": false
+}

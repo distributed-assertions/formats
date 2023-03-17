@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-collections.github.io/formats/schemas/annotatedSequent.schema.json",
+  "title": "DAMF Annotated Sequent Object",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "annotated-sequent"
+    },
+    "sequent": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "annotation": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "sequent", "annotation" ],
+  "additionalProperties": false
+}

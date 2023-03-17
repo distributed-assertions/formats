@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/context.schema.json",
+  "title": "DAMF Context Object",
+  "description": "The CID of these objects shall be used to identify contexts in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "context"
+    },
+    "language": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "content": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "language", "content" ],
+  "additionalProperties": false
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/distributed-assertions/formats/blob/main/schemas/language.schema.json",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/language.schema.json",
   "title": "DAMF Language Object",
   "description": "The CID of these objects shall be used to identify languages in DAMF",
   "type": "object",

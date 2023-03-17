@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-assertions.github.io/formats/schemas/production.schema.json",
+  "title": "DAMF Production Object",
+  "description": "The CID of these objects shall be used to identify productions in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "production"
+    },
+    "sequent": {
+      "$ref": "/formats/schema/ipldLink.schema.json"
+    },
+    "mode": {
+      "anyOf": [
+        { "type": "null" },
+        { "const": "axiom" },
+        { "const": "conjecture" },
+        { "$ref": "/formats/schema/ipldLink.schema.json" }
+      ],
+    }
+  },
+  "required": [ "format", "sequent", "mode" ],
+  "additionalProperties": false
+}

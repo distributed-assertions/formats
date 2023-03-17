@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-collections.github.io/formats/schemas/collection.schema.json",
+  "title": "DAMF Collection Object",
+  "description": "The CID of these objects shall be used to identify collections in DAMF",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "collection"
+    },
+    "name": {
+      "type": "string"
+    },
+    "elements": {
+      "type": "array",
+      "item": {
+        "$ref": "/formats/schemas/ipldLink.schema.json"
+      }
+    }
+  },
+  "required": [ "format", "name", "elements" ],
+  "additionalProperties": false
+}

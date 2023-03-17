@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distributed-collections.github.io/formats/schemas/annotatedProduction.schema.json",
+  "title": "DAMF Annotated Production Object",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "annotated-production"
+    },
+    "production": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    },
+    "annotation": {
+      "$ref": "/formats/schemas/ipldLink.schema.json"
+    }
+  },
+  "required": [ "format", "production", "annotation" ],
+  "additionalProperties": false
+}
