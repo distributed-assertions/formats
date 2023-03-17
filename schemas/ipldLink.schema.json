@@ -7,8 +7,8 @@
     "/": {
       "type": "string",
       "format": "cid"
-    },
-    "required": [ "/" ],
-    "additionalProperties": false
-  }
+    }
+  },
+  "required": [ "/" ],
+  "additionalProperties": false
 }
